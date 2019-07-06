@@ -30,7 +30,7 @@ $username = $fbiinfo['user']['username'];
 //註冊用的email，獲取email，如果沒有，隨機生成亦可，email需要通過strtolower轉為小寫，否則驗證不通過
 $email = strtolower($fbiinfo['user']['email']);
 //根據用戶名查詢uid，進而判斷是否為論壇用戶
-$uid = C::t('common_member')->fetch_uid_by_username($username);
+$uid = C::t('common_member')->fetch_uid_by_email($username);
 
 
 /*
