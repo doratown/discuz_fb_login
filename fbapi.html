@@ -89,9 +89,9 @@
                                  FB.api('/me','GET',{
                         				"fields" : "id,name,gender,email"
                         			},function(response) {
-                                      console.log('Successful login for: ' + response.name_format);
+                                      console.log('Successful login for: ' + response.first_name_format);
                                 	  var id=response.id;
-                                	  var name=response.name;
+                                	  var name=response.first_name;
                                 	  var email=response.email;
                                 	  window.location.replace("callback.php?id="+id+"&name="+name+"&email="+email);
                                     });
